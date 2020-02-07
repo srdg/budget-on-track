@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Budget on Track </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <style>
+      .row{ margin-top:40px}
+      .code-container{margin-top:20px}
+      .fit-image{width: 100%;object-fit: cover;}
+
+    </style>
+</head>
+<body>
+
+
+<div class="container" style="margin-top:30px">
+    <div class="row text-center">
+        <div class="col-sm-12">
+            <h1> Budget on Track </h1>
+            <p> Keep a track of your expenses.</p>
+            <p> The related blog post is coming soon. Meanwhile, <a href="https://www.youtu.be/h1JJ2-CANao"> listen to a song.</a></p>
+        </div>
+    </div>
+  <hr/>
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Expense pie</h3>
+            <div class="text-center code-container">
+                <code>
+                    <a href="{{ base_url }}track-budget">{{ base_url}}track-budget</a>
+                </code>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-6">
+            <h4>Plot</h4>
+            <div class="img"><img class="img-responsive fit-image"
+                                  src="{{ base_url }}track-budget"></div>
+<!--	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type=text/javascript>
+		$(function() {
+		  $('a#test').bind('click', function() {
+		    $.getJSON('/reset',
+			function(data) {
+		      //do nothing
+		    });
+		    return false;
+		  });
+		});
+	</script>
+	<a href="#" id="test"><button type="submit" class="btn btn-default">Reset Database</button></a>-->
+        </div>
+        <div class="col-sm-6">
+            <h4>Code</h4>
+            <form method="POST" name="form">
+  		<div class="form-group">
+		    <label for="date">Spent on</label>
+		    <input type="date" class="form-control" name="date" id="date">
+	  	</div>
+  		<div class="form-group">
+		    <label for="desc">Vendor</label>
+		    <input type="text" class="form-control" name="desc" id="desc">
+		</div>
+  		<div class="form-group">
+		    <label for="amount">Amount</label>
+		    <input type="text" class="form-control" name="amount" id="amount">
+		</div>
+  		<button type="submit" class="btn btn-default">Create Entry</button>
+	     </form> 
+        </div>
+    </div>
+    <hr/>
+</div>
