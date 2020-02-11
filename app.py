@@ -66,6 +66,7 @@ def clear_db():
 
 @app.route('/')
 def index():
+	bytes_obj = plot()	
 	return render_template('index.html', base_url=BASE_URL)
 
 
